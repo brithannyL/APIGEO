@@ -10,7 +10,7 @@ import {
     getTitulosByGeolocalizacion,
     postMedida,
     postTitulo
-} from '../controllers/geolocalizacionController.js';
+} from '../controladores/geoloclizaciónCtrl.js';
 
 const router = express.Router();
 
