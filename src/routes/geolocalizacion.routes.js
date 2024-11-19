@@ -9,7 +9,8 @@ import {
     getMedidasByGeolocalizacion,
     getTitulosByGeolocalizacion,
     postMedida,
-    postTitulo
+    postTitulo,
+    getTitulos
 } from '../controladores/geoloclizaciónCtrl.js';
 
 const router = express.Router();
@@ -27,5 +28,6 @@ router.get('/geolocalizaciones/:id/medidas', getMedidasByGeolocalizacion);
 router.get('/geolocalizaciones/:id/titulos', getTitulosByGeolocalizacion);
 router.post('/geolocalizaciones/:id/medidas', postMedida);
 router.post('/geolocalizaciones/:id/titulos', postTitulo);
+router.get('/titulos', getTitulos);
 
 export default router;

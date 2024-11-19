@@ -132,3 +132,16 @@ export const postTitulo = async (req, res) => {
         return res.status(500).json({ message: "Error al crear título" });
     }
 };
+// Obtener todos los títulos (GET)
+export const getTitulos = async (req, res) => {
+    try {
+        const [result] = await conmysql.query('SELECT * FROM tb_titulos');
+        res.json({ datos: result, message: "Consulta de títulos realizada con éxito" });
+    } catch (error) {
+        return res.status(500).json({ datos: null, message: "Error al consultar títulos" });
+    }
+};
+
+// En el router
+router.get('/titulos', getTitulos);
+
