@@ -21,7 +21,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json()); // Para procesar JSON en las solicitudes
 app.use(express.urlencoded({ extended: true })); // Para procesar formularios
-app.use('/uploads', express.static(path.join(__dirname, '../uploads'))); // Ruta para servir archivos estáticos
 
 // Rutas de la API
 app.use('/api', geolocalizacionRoutes); // Ruta para geolocalización
